@@ -38,9 +38,26 @@ class CalendarPage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 16),
         child: Column(
           children: [
-            const Text(
-              'August',
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.chevron_left, size: 32),
+                  onPressed: () {
+                    debugPrint('← Mes anterior');
+                  },
+                ),
+                const Text(
+                  'August',
+                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                ),
+                IconButton(
+                  icon: const Icon(Icons.chevron_right, size: 32),
+                  onPressed: () {
+                    debugPrint('→ Mes siguiente');
+                  },
+                ),
+              ],
             ),
             const SizedBox(height: 20),
             Row(
